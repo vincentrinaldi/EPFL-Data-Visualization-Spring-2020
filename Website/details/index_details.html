@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!--Standard meta parameters-->
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--Standard script imports-->
+	<script src="../lib/d3.min.js"></script>
+	<script src="script_details.js"></script>
+
+	<!--Page title and authors-->
+	<title>International Football</title>
+	<meta name="author" content="Alexandre Reynaud, Léo Bouraux, Vincent Rinaldi">
+
+	<!--Standard style imports-->
+	<link rel="stylesheet" href="../visualizations/style_visu.css">
+	<link rel="stylesheet" href="table.scss">
+	<link rel="stylesheet" href="style_details.css">
+
+	<!--Slider imports-->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<!--Slider and background image fade in script-->
+	<script>
+		$( function() {
+			$( "#slider-range" ).slider({
+				range: true,
+				min: 1872,
+				max: 2020,
+				values: [ 1872, 2020 ],
+				slide: function( event, ui ) {
+					$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+					$( "#slider_text" ).html(ui.values[ 0 ]+" - "+ui.values[ 1 ]);
+				}
+			});
+			$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+					" - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+			var selecting = false;
+			$( "#slider_container" ).on("mousedown", function (evt) {
+				selecting = true;
+			}).on("mouseup", function (evt) {
+				selecting = false;
+				if ((data != null || (data1 != null && data2 != null)) && (currBtnTeamId != null)) {
+					load_data();
+				}
+			});
+			$(document).on("mouseup", function (evt) {
+				if (selecting == true) {
+					selecting = false;
+					if ((data != null || (data1 != null && data2 != null)) && (currBtnTeamId != null)) {
+						load_data();
+					}
+				}
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+
+<!--Button to generate world data-->
+<div class="btn-style-div"
+	 id="generate_container" onclick="load_data()">
+	<b>GENERATE DATA</b>
+</div>
+
+<!--Visualization switching buttons-->
+<div id="btns">
+	<div class="btn-style-div" id="history-button" onclick="change_tab('HISTORY')">
+		<p style="flex: 0 0 120px;">History</p>
+	</div>
+
+	<div class="btn-style-div" id="map-button" onclick="change_tab('MAP')">
+		<p style="flex: 0 0 120px;">Map</p>
+	</div>
+</div>
+
+<!--Comparison criterion radio boxes-->
+<form id="measure_container">
+	<p>MEASURE</p>
+</form>
+
+<!--Comparison competition radio boxes-->
+<form id="competition_container">
+	<p>COMPETITION</p>
+</form>
+
+
+<!--Time slider-->
+<div id="slider_container">
+	<div id="slider-range"></div>
+	<div style="font-size:1vw;" id="slider_text">1872 - 2020</div>
+</div>
+
+<!--Flag slider-->
+<div class="flag-slider" id="js_flag_scroll"></div>
+<div class="wrap-input100" id="anim-map-input">
+	<input class="input100" type="text" id="search_bar" oninput="input_listener()" placeholder="Search for a country...">
+	<span class="focus-input100"></span>
+</div>
+
+<!--Guideline bubble -->
+<div class="guideline_container">
+</div>
+<div class="anim-text">
+	Generate world-wide statistics by selecting a criterion and one or several competitions.
+</div>
+<div class="anim-text" style="animation-delay: 6s">
+	You can select one or two teams for individual analysis and statistical comparisons.
+</div>
+<div class="anim-text" style="animation-delay: 12s">
+	A time slider is available to navigate through time.
+</div>
+
+<!--Div containing bar plots for every team-->
+<div id="dataBoard" class="board">
+	<div id="graphic"></div>
+</div>
+
+<!--Div containing bar plots for one team-->
+<div id="dataTeam" class="board" style="display:none;">
+	<div id="flagTeam" class="flagBoardDisplay" onclick="changeVS1()"></div>
+	<div id="graphTitleOneTeam" class="titleDiv"></div>
+	<div id="graphicTeam"></div>
+</div>
+
+<!--Div for two teams comparison-->
+<div id="dataVS" class="board" style="display:none">
+	<div id="flagVS1" class="flagBoardDisplay" onclick="changeVS1()"></div>
+	<div id="flagVS2" class="flagBoardDisplay2" onclick="changeVS2()"></div>
+	<div id="nameCountry1" class="titleDiv1"></div>
+	<div id="nameCountry2" class="titleDiv2"></div>
+	<table id="tableTwoTeams" class="fixed" style="margin-right:4.55vw"></table>
+</div>
+
+</body>
+
+</html>

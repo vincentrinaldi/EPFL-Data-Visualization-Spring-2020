@@ -1,0 +1,552 @@
+/* INTRODUCTION
+The various units of measurement available in CSS: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units */
+
+:root {
+	--blue: #007bff;
+	--background: #c5e8ff;
+	--backgrounddark: #a5c9e0;
+	--backgrounddark2: #77a0ba;
+	--black:#000;
+	--darkdarkgrey: #111;
+	--darkgrey: #3c3c3c;
+	--grey: #6c6c6c;
+	--lightgrey: #9c9c9c;
+	--lightlightgrey: #cccccc;
+	--light3grey: #ddd;
+	--light4grey: #eee;
+	--white:#fff;
+	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+* {
+	box-sizing: border-box;
+}
+/*Make the document fill the whole viewport, this overrides any weird defaults that browsers might have.*/
+html, body, figure {
+
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+/* Default font and size */
+body {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-content: center;
+
+	/* background behind the plot */
+	background: var(--background);
+
+	/* default text */
+	font-family: Helvetica, sans-serif;
+	font-size: 1.1rem;
+}
+
+
+hr {
+	border: 1px solid rgba(40, 97, 125, 0.8);
+}
+
+
+/* FLAG SLIDER */
+
+.flag-slider {
+	overflow: auto;
+	white-space: nowrap;
+	padding-bottom: 1vh;
+	position: absolute;
+	top: 80%;
+	left: 3.75vw;
+	width: 89.6vw;
+	/*height: 18%;*/
+	margin: 1vw 1vw;
+	animation-name: fadeInFromNone;
+	animation-delay: 1s;
+	animation-duration: 1.8s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+/*shadow effect on flags*/
+.button-style {
+	transition: all 1s ease-out;
+	background: rgba(88, 88, 88, 0.5);
+	border-radius:50%;
+	vertical-align:middle;
+	color: #FFF;
+	position:absolute;
+	font-weight: 700;
+	text-align: center;
+	font-size: 0.8vw;
+	font-family: 'Source Sans Pro', serif;
+	top: 0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	display:inline-block;
+	text-decoration: none;
+	text-transform:uppercase;
+	cursor: cell;
+}
+.button-style:before{
+	content: '';
+	display: inline-block;
+	height: 56%;
+	horiz-align:center;
+}
+.button-style:hover {
+	background: none;
+	border: none;
+	opacity:0;
+}
+/*one flag*/
+.square {
+	width: 3vw;
+	height: 3vw;
+	position: relative;
+	margin-top: 10%;
+}
+.square img {
+	object-fit: cover;
+	width: 3vw;
+	border-radius:50%;
+	height:3vw;
+}
+/*two flags*/
+.wrapper{
+	width: 3vw;
+	height: 7vw;
+	display: inline-block;
+	position: relative;
+	overflow:hidden;
+	margin-top: 1%;
+	margin-left: 1%;
+}
+
+
+
+/* SEARCH INPUT */
+
+input {
+	outline: none;
+	border: none;
+}
+input:focus {
+	border-color: transparent !important;
+}
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+input::-webkit-input-placeholder { color: var(--darkgrey);}
+input:-moz-placeholder { color: var(--darkgrey);}
+input::-moz-placeholder { color: var(--darkgrey);}
+input:-ms-input-placeholder { color: var(--darkgrey);}
+
+.wrap-input100 {
+	width: 13vw;
+	position: absolute;
+	top: 78vh;
+	border-bottom: .1vw solid var(--darkgrey);
+	padding: 0 1.5vw;
+	background-image: url('images/loupe.png');
+	background-position: 0 60%;
+	background-size: 10%;
+	opacity: 0;
+	background-repeat: no-repeat;
+	z-index: 10;
+	right: 5.65vw;
+}
+.input100 {
+	display: block;
+	width: 100%;
+	background: transparent;
+	font-family: "Helvetica Neue", sans-serif;
+	color: var(--darkdarkgrey);
+	font-size: .9vw;
+}
+.focus-input100::before {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -9%;
+	left: 0;
+	width: 0;
+	height: 10%;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+	background: var(--darkdarkgrey);
+}
+input.input100 {
+	height: 4%;
+}
+.input100:focus + .focus-input100::before {
+	width: 100%;
+}
+#anim-map-input{
+	animation-name: fadeInFromNone;
+	animation-delay: 1s;
+	animation-duration: 1.8s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+
+
+
+
+
+/* TIME SLIDER
+ * https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css
+ */
+
+#slider_container {
+	position: absolute;
+	top: 77vh;
+	left: 35vw;
+	width: 30vw;
+	height: 5vh;
+	float: left;
+	text-align: center;
+	color: var(--darkdarkgrey);
+	animation-name: fadeInFromNone;
+	animation-delay: 1s;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: default;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+.ui-slider-horizontal {
+	height: .8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.2em;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+/*Bars colors*/
+.ui-widget-content {
+	background: var(--backgrounddark);
+	color: #333333;
+}
+.ui-widget-content a {
+	color: #333333;
+}
+.ui-widget-header {
+	background: var(--backgrounddark2);
+	font-weight: bold;
+}
+/* Cursor colors and shape*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:active {
+	background: var(--lightlightgrey);
+}
+.ui-widget-content .ui-state-hover{
+	background: var(--lightgrey);
+}
+.ui-widget-content .ui-state-active{
+	background: var(--grey);
+}
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-radius:10px;
+}
+
+
+
+
+
+
+
+/* MAIN CONTAINERS */
+
+#btns {
+	position: absolute;
+	top: 5vh;
+	right: 1vw;
+	width: 8vw;
+	height: 20vh;
+	text-align: center;
+}
+.btn-style-div {
+	cursor:pointer;
+	text-decoration:none;
+	font-weight:300;
+	color: var(--darkdarkgrey);
+	background-color: rgba(119, 160, 186, 0.6);
+	text-align:center;
+	transition: all 0.5s;
+	width:8vw;
+	height:5vh;
+	font-size:1vw;
+	margin-bottom:2vh;
+	border-radius: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn-style-div:hover {
+	background-color: rgba(165, 201, 224, 0.6);
+}
+
+#measure_container, #competition_container, .map_select, #map_hover, .guideline_container, .anim-text {
+	position: absolute;
+	width: 15vw;
+	overflow: hidden;
+	border-radius: 1em;
+	padding:1%;
+	font-weight:300;
+	font-size: 1vw;
+	min-font-size: 16px;
+	background-color: rgba(119, 160, 186, 0.4);
+	color: var(--darkdarkgrey);
+	transition: all 0.5s;
+	white-space: nowrap;
+}
+#measure_container p , #competition_container p, .map_select p, #map_hover p {
+	font-size:1vw;
+	font-weight: bold;
+	margin-top: -0.5vw;
+	opacity: 0.9;
+	text-align: center;
+}
+#map_hover p{
+	margin-top: -0.5vw !important;
+	margin-bottom: 0 !important;
+
+	padding-top: 0 !important;
+}
+#measure_container:hover, #competition_container:hover {background-color: rgba(119, 160, 186, 0.6);}
+#measure_container {
+	top: 10vh;
+	height: 30vh;
+	left: 1vw;
+	text-align:left;
+	float:left;
+}
+#generate_container {
+	top: 75.5vh;
+	height: 5vh;
+	left: 3.4vw;
+	width: 10vw;
+	text-align:left;
+	float:left;
+	background: var(--backgrounddark2);
+	position: absolute;
+	overflow: hidden;
+	border-radius: 1em;
+	cursor: pointer;
+}
+#generate_container:hover {
+	background: rgba(75, 102, 120, 0.9);
+}
+#generate_container_back {
+	top: 75.5vh;
+	height: 5vh;
+	left: 77vw;
+	width: 13vw;
+	text-align:left;
+	float:left;
+	background: var(--backgrounddark2);
+	position: absolute;
+	overflow: hidden;
+	border-radius: 1em;
+	visibility: hidden;
+}
+#generate_container_back:hover {
+	background: rgba(75, 102, 120, 0.9);
+}
+#competition_container {
+	top: 42vh;
+	height: 30vh;
+	left: 1vw;
+	text-align:left;
+	float:left;
+}
+.map_select{
+	height: 25vh;
+	top: 47vh;
+	right: 1vw;
+	font-size:1vw;
+	overflow: auto;
+	width: 11vw;
+	display: block;
+}
+
+#map_legend{
+	position: absolute;
+	height: 18vh;
+	top: 47vh;
+	right: 13vw;
+	font-size:1vw;
+	text-align: center;
+	width: 4vw;
+	background-color: rgba(1,0,0,0.5);
+}
+
+#map_hover{
+	top: 37vh;
+	font-size:1vw;
+	right: 1vw;
+	text-align: center;
+	height: 8vh;
+	width: 11vw;
+	white-space: initial;
+}
+.content {
+	position: absolute;
+	top: 2vw;
+	left: 5%;
+	right: 5%;
+	bottom: 5%;
+	overflow: auto;
+}
+.guideline_container, .anim-text{
+	background-color: var(--backgrounddark2);
+	height: 8vh;
+	top: 1vh;
+	left: 1vw;
+	text-align: center;
+	opacity: 0;
+	white-space: initial;
+	line-height: normal;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+}
+.guideline_container {
+	overflow: hidden;
+	animation-name: fadeOut;
+	animation-duration: 15s;
+	animation-delay: 200ms;
+	animation-fill-mode: forwards;
+}
+.anim-text{
+	color: rgba(17, 17, 17, 0);
+	opacity: 1;
+	background-color: rgba(119, 160, 186, 0);
+	animation-name: fadeInAndOutText;
+	animation-delay: 1s;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	position: absolute;
+}
+
+
+
+
+
+
+
+/* CHECK BOXES AND RADIO BUTTONS */
+
+body label {
+	display: block;
+	font-size: 1vw;
+	min-font-size: 16px;
+	color: var(--darkdarkgrey);
+	padding-top: -20px;
+}
+.option-input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	position: relative;
+	height: 1vw;
+	width: 1vw;
+	min-width: 10px;
+	min-height: 10px;
+	transition: all 0.2s ease-out 0s;
+	background: rgba(155, 177, 198, 0.8);
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 0.5rem;
+	outline: none;
+	margin-top:0;
+	vertical-align:middle;
+}
+.option-input:hover {
+	background: rgba(130, 154, 177, 0.9);
+}
+.option-input:disabled {
+	background: rgba(108, 126, 147, 0.9);
+	opacity: 0.25;
+	cursor: default;
+}
+.option-input:checked {
+	background: rgba(40, 97, 125, 0.8);
+}
+.option-input.radio {
+	border-radius: 50%;
+}
+.option-input.radio::after {
+	border-radius: 50%;
+}
+
+
+
+
+
+
+/* ANIMATIONS */
+@keyframes fadeInAndOut {
+	0% {display: block;opacity: 1;}
+	20% {display: block;opacity: 1;}
+	80% {display: block;opacity: 1;}
+	100% {opacity: 0;display: none}
+}
+@keyframes fadeOut {
+	0% {display: block;opacity: 1;}
+	20% {display: block;opacity: 1;}
+	80% {display: block;opacity: 1;}
+	100% {opacity: 0;display: none}
+}
+
+@keyframes fadeInAndOutText {
+	0% {display: block;color: rgba(17, 17, 17, 0);background-color: rgba(119, 160, 186, 0);}
+	20% {display: block;color: rgb(17, 17, 17);background-color: rgba(119, 160, 186, 1);}
+	80% {display: block;color: rgba(17, 17, 17, 1);background-color: rgba(119, 160, 186, 1);}
+	100% {display: block;color: rgba(17, 17, 17, 0);background-color: rgba(119, 160, 186, 0);}
+}
+
+@keyframes fadeInFromNone {
+	0% {display: none;opacity: 0;}
+	100% {display: block;opacity: 1;}
+}

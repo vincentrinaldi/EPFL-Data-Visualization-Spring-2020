@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!--Standard meta parameters-->
+	<meta charset="utf-8">
+
+	<!--Standard script imports-->
+	<script src="../lib/d3.min.js"></script>
+	<script src="script_visu.js"></script>
+
+	<!--Page title and authors-->
+	<title>International Football</title>
+	<meta name="author" content="Alexandre Reynaud, Léo Bouraux, Vincent Rinaldi">
+
+	<!--Standard style imports-->
+	<link rel="stylesheet" href="style_visu.css">
+
+	<!--Slider imports-->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<!--Slider script-->
+
+	<!--Importing Leaflet-->
+	<link rel="stylesheet" href="leaflet/leaflet.css" />
+	<style type="text/css">
+		.leaflet-container{background-color:var(--background);}
+	</style>
+
+	<!--Choropleth map scripts-->
+	<script src="leaflet/leaflet.js"></script>
+
+</head>
+<body>
+
+<!--Choropleth map container-->
+<div id="map" style="width: 99vw; height: 75vh;"></div>
+
+<!--Choropleth map data containers-->
+<div id="map_hover"></div>
+<div class="map_select" id="map_select_id">
+	<p style="margin-top:3px;line-height: 0;">SUMMARY</p>
+</div>
+
+<svg style="position: relative;
+	width: 2vw; height: 25vh;
+	padding:0 !important;
+	margin: 0 !important;
+	top: 50vh;
+	right: 12vw;
+	font-size:1vw;
+	text-align: center;">
+	<defs>
+		<linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
+			<stop offset="0%" style="stop-color:rgba(238, 241, 203, 0.85);stop-opacity:1" />
+			<stop offset="100%" style="stop-color:rgba(160, 96, 107, 0.85);stop-opacity:1" />
+		</linearGradient>
+	</defs>
+	<rect width="50" height="150" fill="url(#grad1)" />
+	<text x="50%" y="140px" font-family="Helvetica"
+		  dominant-baseline="middle" text-anchor="middle"
+		  font-size="12px" id="min_display">
+		0
+	</text>
+	<text x="50%" y="13px" font-family="Helvetica"
+		  dominant-baseline="middle" text-anchor="middle"
+		  font-size="10px" id="max_display">
+	</text>
+</svg>
+
+<!--Visualization switching buttons-->
+<div id="btns">
+	<div class="btn-style-div" id="history-button" onclick="change_tab('HISTORY')">
+		<p style="flex: 0 0 120px;">History</p>
+	</div>
+
+	<div class="btn-style-div" id="details-button" onclick="change_tab('DETAILS')">
+		<p style="flex: 0 0 120px;">Details</p>
+	</div>
+</div>
+
+<!--Comparison criterion radio boxes-->
+<form id="measure_container">
+	<p>MEASURE</p>
+</form>
+
+<!--Comparison competition radio boxes-->
+<form id="competition_container">
+	<p>COMPETITION</p>
+</form>
+
+<!--Visualization title (map excluded)-->
+
+<!--Time slider-->
+<div id="slider_container">
+	<div id="slider-range"></div>
+	<div style="font-size:1vw;" id="slider_text">1872 - 2020</div>
+</div>
+
+<!--Flag slider-->
+<div class="flag-slider" id="js_flag_scroll"></div>
+<div class="wrap-input100" id="anim-map-input">
+	<input class="input100" type="text" id="search_bar" oninput="input_listener()" placeholder="Search for a country...">
+	<span class="focus-input100"></span>
+</div>
+
+<!--Generate data button-->
+<div class="btn-style-div"
+	 id="generate_container">
+	<b>GENERATE DATA</b>
+</div>
+<button type="button" id="buttonData" class="buttonLoad" onclick="load_map()"></button>
+
+</body>
+</html>

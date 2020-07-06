@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+
+    <!--Jquery v1.12.2 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!--GreenSock TweenMax v1.14.2 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js'></script>
+    <!--Magic Scroll v1.3.0 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.debug.js'></script>
+    <!--Scroll To Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="Website/history/script.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+    <link rel="stylesheet" href="Website/history/style.css">
+    <title>History Page</title>
+</head>
+<body>
+
+<section class="main_title" id="main_title">
+
+    <div class="container_title">
+        <h1 class="line1">International football data</h1>
+        <p class="line2">Here is a brief chronological history</p>
+        <p> </p>
+        <p class="line3">of international football</p>
+        <p> </p>
+        <p class="line4">from its beginnings</p>
+        <p> </p>
+        <p class="line5">to the present days.</p>
+    </div>
+    <div class="btn_go_viz center"
+         onclick="change_tab('VISUALIZATION from history')">
+        Go to Data Visualization
+    </div>
+
+    <div class="lineEnd center">Scroll down for history</div>
+    <img class="imageEnd center" src="Website/history/images/swipe-down-arrow-white.png" alt="">
+</section>
+
+<!-- Summary stats-->
+<section class="animated-text" id="at0">
+    <div class="container_animated-text">
+        <div class="row"> <!--permits to display the whole in a row in a narrow window -->
+            <div class="col-type-2">
+                <h3 class="text-gradient" id="heading0">
+                    Timeline Stats Summary
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="container_timeline">
+        <div id="thumbs">
+            <div class="history-block bg-tl-1">
+                <div class="cover">
+                    <div class="year">1872 - 1900</div>
+                    <div class="section-btn" onclick="goto('#at1')">Jump to section</div>
+                    <div class="stats" id="stat1">
+                    </div>
+                </div>
+            </div>
+            <div class="history-block bg-tl-2">
+                <div class="cover">
+                    <div class="year">1900 - 1930</div>
+                    <div class="section-btn" onclick="goto('#at2')">Jump to section</div>
+                    <div class="stats" id="stat2">
+                    </div>
+                </div>
+            </div>
+            <div class="history-block bg-tl-3">
+                <div class="cover">
+                    <div class="year">1930 - 1950</div>
+                    <div class="section-btn" onclick="goto('#ap1')">Jump to section</div>
+                    <div class="stats" id="stat3">
+                    </div>
+                </div>
+            </div>
+            <div class="history-block bg-tl-4">
+                <div class="cover">
+                    <div class="year">1950 - 1970</div>
+                    <div class="section-btn" onclick="goto('#ap2')">Jump to section</div>
+                    <div class="stats" id="stat4">
+                    </div>
+                </div>
+            </div>
+            <div class="history-block bg-tl-5">
+                <div class="cover">
+                    <div class="year">1970-1990</div>
+                    <div class="section-btn" onclick="goto('#at5')">Jump to section</div>
+                    <div class="stats" id="stat5">
+                    </div>
+                </div>
+            </div>
+            <div class="history-block bg-tl-6">
+                <div class="cover">
+                    <div class="year">1990-2000</div>
+                    <div class="section-btn" onclick="goto('#at6')">Jump to section</div>
+                    <div class="stats" id="stat6">
+                    </div>
+                </div>
+            </div>
+            <div class="history-block bg-tl-7">
+                <div class="cover">
+                    <div class="year">2000-2010</div>
+                    <div class="section-btn" onclick="goto('#ap3')">Jump to section</div>
+                    <div class="stats" id="stat7">
+                    </div>
+                </div>
+            </div>
+            <div class="history-block bg-tl-8">
+                <div class="cover">
+                    <div class="year">2010-2020</div>
+                    <div class="section-btn" onclick="goto('#at7')">Jump to section</div>
+                    <div class="stats" id="stat8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--2010-2020-->
+<section class="animated-text" id="at_gif">
+    <div class="container_animated-text ">
+        <div class="row"> <!--permits to display the whole in a row in a narrow window -->
+            <div class="col-type-2" id="heading_gif">
+                <h3 class="text-gradient" >
+                    Animated statistics
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="animated-images" id="ai_gif">
+    <div class="container_animated-images">
+        <div class="row">
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box01">
+                    <h2 class="text-white">Evolution of the number of played games per country</h2>
+                    <p class="lead">
+                        As we will see, the evolution of football has been a step-by-step process, starting out very centralised in the United Kingdom, then democratising in South America and Europe and then on the other continents.                    </p>
+                    <img src="Website/history/images/match_played.gif" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box02">
+                    <h2 class="text-white">Evolution of the number of goal scored per country</h2>
+                    <p class="lead">
+                        The more a team plays, the more goals it will score, this evolution is correlated to the other but different. A team can play a lot of matches without scoring or play few matches and being very productive...                  </p>
+                    <img src="Website/history/images/goal_scored.gif" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--1872-1900-->
+<section class="animated-text" id="at1">
+    <div class="container_animated-text ">
+        <div class="row"> <!--permits to display the whole in a row in a narrow window -->
+            <div class="col-type-1">
+                <h3 class="text-white" id="heading">
+                    Football <br> Early Days
+                </h3>
+                <div id="caption01">
+                    <h4 class="text-gradient">The roots of football, <br> go back to <br> the Middle Ages. </h4>
+                    <p class="text-white">
+                        At that time it was a mixture of several "games" characterized by their violence and lack of rules. It was at the beginning of the 19<sup>th</sup> century that English schools integrated sports into their education programs and encouraged its formalization. In October 1848, the Cambridge Rules were a first attempt to unify the football rules. While the first independent clubs appeared in the 1860s, first international football match took place during the 1870s.
+                    </p>
+                </div>
+            </div>
+            <div class="col-type-1b">
+                <div class="animated-text-wrap">
+                    <div id="caption02">
+                        <h4 class="text-gradient">The first international <br> football match: <br> Scotland - England </h4>
+                        <p class="text-white">
+                            November 30<sup>th</sup> <b>1972 was the beginning of international matches</b>. It opposed <b>Scotland and England</b> and occurred in Glasgow. The score at the end of the match was <b>0-0</b>. Before this fixture, others took place in the early 1870s, opposing the same teams, but were not official.
+                        </p>
+                    </div>
+                </div>
+                <div id="caption03">
+                    <h4 class="text-gradient">Up to the 20th century <br> international football <br>  was poorly developed. </h4>
+                    <p class="text-white">
+                        The first 5 games were again between England and Scotland. Until 1900, matches were mainly played on British territories. Out of the 127 matches played during this period, <b>only 6 countries participated</b>: England, Scotland, Wales, Northern Ireland, United States and Canada. Especially the first 4 which were opposed to each other more often, especially during the oldest official tournament: the British Championship.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="animated-images" id="ai1">
+    <div class="container_animated-images">
+        <div class="row">
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="im01 box01">
+                    <div class="inner-box" style="width: 100%; height: 400px;"></div>
+                </div>
+            </div>
+
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="im02 box02">
+                    <p class="text-white" style="font-size: 18px;font-weight:300;line-height: 30px;text-align:center">
+                        Rules were not as strict as they are today...
+                    </p>
+                    <div class="inner-box" style="width: 100%; height: 400px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--1900-1930-->
+<section class="animated-text" id="at2">
+    <div class="container_animated-text ">
+        <div class="row"> <!--permits to display the whole in a row in a narrow window -->
+            <div class="col-type-4">
+                <h3 class="text-white" id="heading2">
+                    From 1900 <br> To 1930
+                </h3>
+                <div id="caption04">
+                    <h4 class="text-gradient">Olympic Games</h4>
+                    <p class="text-white">
+                        The first Olympic Games of the 20<sup>th</sup> century were hosted in Paris in 1900. It was during this edition, the second of the modern Olympic Games, that football made its debut.
+                    </p>
+                    <img src="Website/history/images/1900.jpg" style="width: 100%; opacity: 0.7" alt="">
+                    <p class="text-white">
+                        England was the winner of the tournament, followed by France. At that time and until 1984, participating teams were amateur teams and from the 1992 Barcelona Olympic Games onwards, only players under 23 were allowed to play, with a maximum of 3 players above this limit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-type-4">
+                <div id="caption05">
+                    <h4 class="text-gradient">The South America Rise </h4>
+                    <p class="text-white">
+                        New tournaments appeared during this period: <b>the Copa Lipton, Newton, Premio Honor Argentino, Premio Honor Uruguayo, Roca, or the Copa Chevallier Boutell</b> are minor cups that took place in South America. But a major cup was also created during this period: the famous and still present <b>Copa America</b>.
+                    </p>
+                    <img src="Website/history/images/1916.jpeg" style="width: 100%; opacity: 0.9" alt="">
+                    <p class="text-white">
+                        The first edition took place in <b>Argentina</b> in <b>1916</b>. The best, second and third teams respectively were <b>Uruguay, Argentina and Brazil</b>.
+                    </p>
+                </div>
+            </div>
+            <div class="col-type-4">
+                <div id="caption06">
+                    <h4 class="text-gradient">Creation of FIFA,<br>  an international influence </h4>
+                    <p class="text-white">
+                        The International Federation of Association Football (FIFA) founded in 1904, is responsible for governing and developing football worldwide with the help of the six continental confederations: UEFA for Europe, CONCACAF and CONMEBOL for North and South America respectively, CAF for Africa, and AFC
+                    </p>
+                    <img src="Website/history/images/FIFA.png" style="width: 100%; opacity: 0.9" alt="">
+                    <p class="text-white">
+                        and OFC for Asia and Oceania. With these new entities, football grew <b>from 6 international teams in 1900 to 64 in 1930</b>. Among these teams, the ones that played the most were <b>Argentina, Sweden and Hungary, with 146, 131 and 128 matches respectively</b>. These same teams also <b>won the most games (resp. 74, 62, 64)</b> and <b>scored the most goals</b> over the period, <b>resp. 273, 349 and 327</b>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--1930-1950-->
+<section class="animated-parallax" id="ap1">
+    <div class="animated-parallax-bgd-1" id="apb1"></div>
+    <div class="container_animated-parallax" id="cap1">
+        <h3 class="text-white">
+            First FIFA World Cups &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1930 - 1950
+        </h3>
+    </div>
+</section>
+
+<section class="animated-text" id="at3">
+    <div class="container_animated-text ">
+        <div class="row"> <!--permits to display the whole in a row in a narrow window -->
+            <div class="col-type-4">
+                <div id="caption07">
+                    <h4 class="text-gradient">1930 - 1934</h4>
+                    <p class="text-white">
+                        FIFA entrusted the organisation of the <b>1<sup>st</sup> World Cup edition in 1930 to Uruguay</b>. 13 countries took part in this edition, mostly South American teams and only 4 European countries since many teams did not want to make the crossing by boat. The first final was played between <b>Argentina and Uruguay</b>, and the latter won 4-2, making South America's domination of football at that time.
+                    </p>
+                    <p class="text-white">
+                        The 2<sup>nd</sup> World Cup occurred in <b>Italy</b>. In a tense political context, the tournament became a powerful political propaganda tool for fascist Italy, who won the trophy. In this edition, <b>16 nations participated</b> and for the same reasons as before, many South American teams, including the current champion, did not participate.
+                    </p>
+                </div>
+            </div>
+            <div class="col-type-4">
+                <figure>
+                    <br><br><br>
+                    <img src="Website/history/images/world_cup.png" width="90%" alt="">
+                </figure>
+            </div>
+            <div class="col-type-4">
+                <div id="caption08">
+                    <h4 class="text-gradient">1938 - 1950<br> Strongest Teams </h4>
+                    <p class="text-white">
+                        In 1938 it was <b>France</b> that organized the World Cup. At the dawn of the World War II, many nations did not take part in the competition (only <b>15</b> for this edition). <b>Italy kept its title.</b>
+                    </p>
+                    <p class="text-white">
+                        Until 1950, World Cups are cancelled. Despite the political conflicts, football grew and <b>39 new national teams has been created</b>. Despite the context, teams that have played the most are European, with <b>Switzerland in 3<sup>rd</sup> place with 128 matches in 20 years</b>, behind <b>Hungary</b> and <b>Sweden</b>. Among the teams with the most victories, the most successful are <b>Argentina, Italy and England with 69%, 66% and 61% of victories</b>. Not far behind are <b>Germany and Brazil (59% of victories)</b>, while Sweden and Hungary are in a slight decline.                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--1950-1970-->
+<section class="animated-parallax" id="ap2">
+    <div class="animated-parallax-bgd-2" id="apb2"></div>
+    <div class="container_animated-parallax" id="cap2">
+        <h3 class="text-white">
+            Post-war World Cups
+        </h3>
+        <p class="text-white">
+            In <b>1950</b>, <b>Brazil</b> hosted its first World Cup (<b>13 teams</b>) but was defeated in final by Uruguay in the legendary Maracanã stadium, which hosted more than 200K supporters for the occasion.
+        </p>
+        <p class="text-white">
+            The 5<sup>th</sup> World Cup took place in <b>Switzerland</b> in <b>1954</b>. It gathered <b>16 teams</b> and Ferenc Puskás' <b>Hungary was finally beaten by West Germany</b>. This competition was a new media era: the first television viewers were able to follow eight matches live.
+        </p>
+    </div>
+</section>
+
+<section class="animated-text" id="at4">
+    <div class="container_animated-text ">
+        <div class="row"> <!--permits to display the whole in a row in a narrow window -->
+            <div class="col-type-5">
+                <h3 class="text-white" id="heading3">
+                    Brazil of <br> King Pelé
+                </h3>
+                <div id="caption09">
+                    <h4 class="text-gradient">Brazil, football <br> Homeland...</h4>
+                    <p class="text-white">
+                        The <b>1958</b> edition took place in <b>Sweden</b>, but it was a young Brazilian, Pelé, who made a memorable appearance. He was the youngest player to lift the trophy and that didn't stop him from scoring multiple times for his country, including three goals in the semi-final against Raymond Kopa's France team. Football will not be the same after his genius has been expressed.
+                    </p>
+                    <p class="text-white">
+                        In <b>1962</b>, it was in <b>Chile</b> where Brazil left their mark. Despite Pele's injury in the opening match, his teammates <b>won 3-1 against Czechoslovakia</b>.
+                        In <b>Mexico</b> in <b>1970</b>, it was strikers who triumphed, <b>scoring an average of 2.97 goals per game</b>, the highest in World Cup history. This edition was also highlighted by Gerd Muller's ten goals, including two hat-tricks, and the absence of red cards throughout the whole competition.  But in the end <b>Brazil won again</b>, once more thanks to Pele, by <b>beating Italy 4-1</b>.
+                    </p>
+                </div>
+            </div>
+            <div class="col-type-5b" id="pele">
+                <figure>
+                    <img src="Website/history/images/19583.png" width="100%" alt="">
+                    <img src="Website/history/images/1958.png" width="90%" alt="">
+                </figure>
+            </div>
+            <div class="col-type-5">
+                <div id="caption10">
+                    <h4 class="text-gradient"> European<br> Come Back </h4>
+                    <p class="text-white">
+                        The Union of European Football Associations (UEFA) was founded in 1954 in Basel. Its role is to manage and develop football at continental level under the supervision of the FIFA. In 1960, the European Football Championship was created, and it is still the second most important competition today. With this new competition and the establishment of a continental club cup, Europe became once again the most prominent region in football world and began to attract South American superstars in the early 1970s.
+                    </p>
+                    <p class="text-white">
+                        In <b>1966</b>, the World Cup was held in <b>England</b>. During an exhibition in London, the cup was stolen but a dog found it in a bush in the south of London. Pele was injured again during this edition, but this time his teammates did not succeed. The Portuguese Eusebio will be the talk of the town, although his team will be beaten by Bobby Charlton's England at home, in the famous Wembley Stadium.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--1970-1990-->
+<section class="animated-text" id="at5">
+    <div class="container_animated-text ">
+        <div class="row"> <!--permits to display the whole in a row in a narrow window -->
+            <div class="col-type-2">
+                <h3 class="text-white" id="heading4">
+                    Secret of strategies
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="animated-images" id="ai2">
+    <div class="container_animated-images">
+        <div class="row">
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <h2 class="text-gradient">1974 - West Germany</h2>
+                    <p class="lead">
+                        With the introduction of total football, <b>West Germany won their second trophy</b> on home soil, beating the Netherlands, led by Johan Cruyff.
+                    </p>
+                    <div class="inner-box" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="Website/history/images/1974.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box04">
+                    <h2 class="text-gradient">1978 - Argentina</h2>
+                    <p class="lead">
+                        The host country wins the competition. The <b>Netherlands lost</b> in the final four years later <b>against Argentina</b> and their famous striker Mario Kempes.
+                    </p>
+                    <div class="inner-box" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="Website/history/images/1978.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box05">
+                    <h2 class="text-gradient">1982 - Italy</h2>
+                    <p class="lead">
+                        First edition with <b>24 teams</b>. In <b>Spain</b>, during the France-Kuwait match, an Emir of Kuwait comes down on the field to cancel a goal, a first in history. <b>Italy won</b> the cup at the famous Santiago Bernabéu Stadium in Madrid, <b>3 goals to 1 against Germany</b>.
+                    </p>
+                    <div class="inner-box" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="Website/history/images/1982.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box06">
+                    <h2 class="text-gradient">1986 - Argentina</h2>
+                    <p class="lead">
+                        This edition in <b>Mexico</b> is highlighted by Diego Maradona. In the quarter-final against England, he scored a famous goal with his hand, known as "La Mano di Dio", and a memorable goal dribbling the entire English defense. Its team, <b>Argentina</b>, <b>won</b> the cup <b>against Germany</b>.
+                    </p>
+                    <div class="inner-box" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="Website/history/images/1986.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--1990-2000-->
+<section class="animated-text" id="at6">
+    <div class="container_animated-text ">
+        <div class="row"> <!--permits to display the whole in a row in a narrow window -->
+            <div class="col-type-4">
+                <h3 class="text-white" id="heading5">
+                    The 1990s
+                </h3>
+                <div id="caption11">
+                    <h4 class="text-gradient">1990 - Germany</h4>
+                    <p class="text-white">
+                        The <b>1990</b> World Cup was held in <b>Italy</b>. Very few people could predict the Cameroonians that they would be the heroes of a World Cup. At the age of 38, Roger Milla was recalled by his national team and scored four goals during the final phase. <b>Germany</b>, after having defeated the Netherlands in the Round of 16 and England in the semi-finals, <b>took their revenge</b> on the Argentinians who had beaten them four years earlier.
+                    </p>
+                    <img src="Website/history/images/1990.jpg" style="width: 100%; opacity: 0.7" alt="">
+                </div>
+            </div>
+            <div class="col-type-4">
+                <div id="caption12">
+                    <h4 class="text-gradient">1994 - Brazil</h4>
+                    <p class="text-white">
+                        It was a World Cup with a <b>lot of goals, 141 exactly</b>, which ended with a game where there were too few goals, ending on penalties. <b>Brazil lift the trophy</b> they love after many years.
+                    </p>
+                    <img src="Website/history/images/1994.jpg" style="width: 100%; opacity: 0.9" alt="">
+                    <p class="text-white">
+                        Alongside the iconic players, Roger Milla becomes the oldest goalscorer in World Cup history at the age of 42, while Diego Maradona, who tested positive for ephedrine, comes out of the World Cup humiliated.
+                    </p>
+                </div>
+            </div>
+            <div class="col-type-4">
+                <div id="caption13">
+                    <h4 class="text-gradient">1998 - France</h4>
+                    <p class="text-white">
+                        In <b>1998</b>, very few Brazilians knew Zinedine Zidane, the magician. Two goals with his head, he turned <b>France</b> into a multicultural celebration they had not anticipated. Emmanuel Petit completed the job with a last-minute goal. France completes the list of countries that hosted the World Cup and won it on home soil. Note that this was the <b>first edition with 32 teams</b>.
+                    </p>
+                    <img src="Website/history/images/1998.jpg" style="width: 100%; opacity: 0.9" alt="">
+                    <p class="text-white">
+                        After this World Cup, football will take a decisive turn and will become drastically more professional: a new era in the 21<sup>st</sup> century that we can call Modern Football.                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--2000-2010-->
+<section class="animated-parallax" id="ap3">
+    <div class="animated-parallax-bgd-3" id="apb3" style="opacity: 0.6"></div>
+    <div class="container_animated-parallax" id="cap3">
+        <h3 class="text-white">
+            Modern Football
+        </h3>
+        <p>
+            The start of the new millennium marks the definitive internationalisation of football, with few Brazilian or Argentinian players staying to play in their own countries. Money is playing a big part in these movements: European football now has a lot of funds at its disposal, such as Zidane's €75m transfer in 2001. Furthermore, <b>3,000 more international matches have been played compared to the last decade</b>. <b>In 10 years, almost 9,000 matches are held</b>.
+        </p>
+        <p>
+            In 2002 and for the first time in the history of the World Cup, two countries, <b>South Korea and Japan, co-hosted the event</b>. South Korea shone through to the semi-finals, becoming the first Asian nation to reach this level. <b>Brazil beat Germany 2-0 in the final</b>, thanks to their new striker Ronaldo, who scored 8 goals in the tournament.
+        </p>
+        <p>
+            Brazil team still impressed with its international stars, such as Ronaldo, Ronaldinho, Kaka and Roberto Carlos, but was stopped by the ageing but still talented France team. This 2006 edition is marked by Zidane's expulsion in the final, which left the <b>Italians to win</b> after a thrilling penalty session.
+        </p>
+    </div>
+</section>
+
+<!--2010-2020-->
+<section class="animated-text" id="at7">
+    <div class="container_animated-text ">
+        <div class="row"> <!--permits to display the whole in a row in a narrow window -->
+            <div class="col-type-2" id="heading6">
+                <h3 class="text-gradient" >
+                    2010s
+                </h3>
+                <h3 class="text-white">
+                    Booming prices<br> European domination
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="animated-images" id="ai3">
+    <div class="container_animated-images">
+        <div class="row">
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box07">
+                    <h2 class="text-gradient">Tiki-taka</h2>
+                    <p class="lead">
+                        Tiki-taka is a game style characterized by the continuous movement of the ball around a series of quick passes. This style is particularly typical of the Spanish game in <b>2010</b>. Full of talent, the Spanish team dominates the World Cup by <b>scoring only 7 goals</b>: simplicity and efficiency.
+                    </p>
+                    <div class="inner-box" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="Website/history/images/Last_Spain.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box08">
+                    <h2 class="text-gradient">Humiliation</h2>
+                    <p class="lead">
+                        Since 2006, European domination has been obvious, but in <b>2014</b>, football return to these lands in Brazil for a World Cup. Unfortunately the Seleçao is humiliated at home in semi-finals: <b>1-7 for Germany</b> who will win the cup 5 days later against Messi’s <b>Argentina</b> team. Brazil is in tears.
+                    </p>
+                    <div class="inner-box" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="Website/history/images/Last_Humiliation.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box09">
+                    <h2 class="text-gradient">Incredible numbers</h2>
+                    <p class="lead">
+                        In 2009, transfer prices soared, with the Portuguese Ronaldo being transferred for €94m. From that moment on, football enters a new dimension, TV rights bring a lot of money to European clubs, and players' salaries boom. In 2017, Brazilian Neymar is transferred for €222m and Argentinian Messi has a salary of €60m per year, excluding bonuses. These players cost a lot but also make a lot of money thanks to the diffusion of their image.
+                    </p>
+                    <div class="inner-box" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="Website/history/images/Last_MessiNeymar.jpeg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box10">
+                    <h2 class="text-gradient">A Surprising World Cup</h2>
+                    <p class="lead">
+                        The 21<sup>st</sup> edition took place in <b>Russia</b>. It was the first one with video-assisted refereeing. It was characterised by the absence of Italy, by the elimination of the five African teams and Germany, the defending champions, in the group stages. Spain were surprisingly eliminated by Russia in the Round of 16 and Brazil in the quarter-final against Belgium. <b>France</b> earned their second star by <b>beating the unexpected Croatia</b> in the final.                    </p>
+                    <div class="inner-box" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="Website/history/images/Last_Mbappe.jpeg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!---->
+<footer class="container_animated-images">
+    <div class="row">
+        <div class="col-type-00">
+            <embed style="width:30px" type="image/svg+xml" src="Website/history/images/ball.svg" />
+            <ul style="padding-left: 0; list-style: none; margin-top: 0;cursor:pointer;" onclick="change_tab('VISUALIZATION from history')">
+                <li><small class="text-skred">2020 EPFL COM-480 Data Visualization</small>
+            </ul>
+        </div>
+        <div class="col-type-3">
+            <h5 class="text-gradient" style="padding-top: 6px">About</h5>
+            <ul id="about_list" class="text-small" style="padding-left: 0; list-style: none; margin-top: 0">
+                <li><a class="text-skred" onclick="change_tab('TEAM from history')" style="cursor: pointer">Team</a></li>
+                <li><a class="text-skred"
+                       target="_blank" rel="noopener noreferrer"
+                       href="https://github.com/com-480-data-visualization/com-480-project-le-kfc">
+                    Code repository
+                </a></li>
+                <li><a class="text-skred" onclick="change_tab('IMAGE SOURCES from history')" style="cursor: pointer">Image sources</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

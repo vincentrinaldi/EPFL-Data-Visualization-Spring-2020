@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+
+    <!--Jquery v1.12.2 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!--GreenSock TweenMax v1.14.2 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js'></script>
+    <!--Magic Scroll v1.3.0 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.debug.js'></script>
+    <!--Scroll To Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="../lib/clipboard.min.js"></script>
+
+    <title>Image Sources</title>
+</head>
+<body>
+
+<!--Heading-->
+<div style="overflow: auto;padding:10vh;padding-top:5vh;">
+    <span class="text-gradient" style="font-size: 45px;font-weight: bold;color: #fff;">
+        Images sources
+    </span>
+    <img src="images/back-white.png"
+         alt=""
+         onmouseover="this.style.opacity=0.8"
+         onmouseleave="this.style.opacity=1"
+         onclick="change_tab('HISTORY from image sources')"
+         style="padding-top:2.7vh;float:right;width: 30px;vertical-align:middle;cursor: pointer;transition: all 0.5s">
+</div>
+
+<!--Images with sources-->
+<section class="animated-images" id="ai2">
+    <div class="container_animated-images">
+        <div class="row">
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn" data-clipboard-text="https://cdnfr1.img.sputniknews.com/img/101697/79/1016977958_0:0:3000:1968_1000x656_80_0_0_73d62f306e332a4bd36927ddee26d67c.jpg"
+                        style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/main.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn" data-clipboard-text="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/England_v_scotland_1872_ad.jpg/1200px-England_v_scotland_1872_ad.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1872.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a  class="btn" data-clipboard-text="https://goldenrankings.com/ngolden41/1880FootballAction.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                        onmouseover="this.style.backgroundColor='#1c466d'"
+                        onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1880.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a  class="btn" data-clipboard-text="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Olympic_flag.svg/1200px-Olympic_flag.svg.png"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                        onmouseover="this.style.backgroundColor='#1c466d'"
+                        onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1900.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a  class="btn" data-clipboard-text="https://media.ouest-france.fr/v1/pictures/MjAxOTA2OGNlM2E4MzliNWRkNmU4ODM1MmVlYmE4ZWI1OWU4MmE?width=480&height=270&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=6685540e44a8c2537e756a7b27d6bda808c0434a808fb047d6fa667d9cd9489e"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                        onmouseover="this.style.backgroundColor='#1c466d'"
+                        onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1916.jpeg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/FIFA_logo_without_slogan.svg/1200px-FIFA_logo_without_slogan.svg.png"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/FIFA.png" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a  class="btn" data-clipboard-text="https://img.src.ca/2014/05/08/1250x703/AFP_140508_1q5or_fifa-1930-uruguay-team_sn1250.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                        onmouseover="this.style.backgroundColor='#1c466d'"
+                        onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1930.jpeg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a  class="btn" data-clipboard-text="https://www.pngitem.com/pimgs/m/285-2854954_football-world-cup-png-transparent-png.png"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                        onmouseover="this.style.backgroundColor='#1c466d'"
+                        onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/world_cup.png" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://pbs.twimg.com/media/D-KXNkeXoAEfPAN.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <a class="btn"  data-clipboard-text="https://upload.wikimedia.org/wikipedia/commons/6/6a/Swiss_World_Champion-1954.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1950-4.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://static.lesvoyagesenballon.fr/p_4_3_8_6_4386-thickbox_default-Maillot-retro-BRESIL-1958-500x500.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/19583.png" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://sportshouse.fr/wp-content/uploads/2019/06/Pele.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1958.png" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://img.fifa.com/image/upload/t_l4/vmsuwcjojhppuoayzzhx.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1974.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://amp.thenational.ae/image/policy:1.254433:1499415880/image/jpeg.jpg?f=16x9&w=1200&$p$f$w=dfa40e8"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1978.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUTExMVFhUXFxgYFhgYGB0aFxgfGhsaFxgYFxgdHSggGBolGxcdITEhJSkrLi4uGB8zODMsNygtLisBCgoKDg0OGxAQGy0mICYtLS0tLS8tLS0tKy0tMC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKMBNgMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAFBgAEAQIDBwj/xAA+EAABAwIEAwUGBQMDBQADAAABAgMRAAQFEiExBkFREyJhcYEUMpGhscEHI0JS8GJy0TOy4RWCkqLxFiST/8QAGgEAAwEBAQEAAAAAAAAAAAAAAQIDBAAFBv/EACwRAAICAgEDBAEDBAMAAAAAAAABAhEDIRIEMUETIjJhUSNxgRTR4fAFM7H/2gAMAwEAAhEDEQA/APDqlSsmuOMVKkVmK44xUroG60NAJipFbhNZTXBo51K3c3rGU1wDWpWYrITXHUa1K2isAVxxKLYHw/cXaim3aU4UiVEaJSOqlHQeW5jShia+i/wuv7a1wpkEgKXmWvqpRUQJjoAE+lSy5FBBSPEb3hO6aSpSmiQn3suuXzG8eMRQMpr6pwq6a7zroSAuFJ5EpKsoJHSY18RXh/4p4MyxefkJCUOJLmUGQCVrBjoIA05VLFnctMZoRIrBqwkDnXJSa02Kc6kV0CKwsUTjSsV0U3FQJrgUaVK6ZKhRXHHOpXUNGtVIrjjQVK3y1rXBMRUraKxFcca1mK3DdZSmdK4451K69ia5xXANalZiszXHGtSsxUrjqMVsmu6LQkT0rRpHWhaDRqoia6NImtewO8aUa4f4ZuLpKloAShJgKUSAo/tSACVHrA0oNpINFN6wgSTpVNxIBorjVg+yezdSRGx/SqP2q5/Wq9nbpnvHXlSuSWwpWU3XBOlclAzVu4t4XoNKuWluXlobEJKlBIJmBOmsVykqOafYH2lqtxQCEKWZAhIncwJ6a11vmFpgLbUjeMwImDBIncSIp5tuFH27VBCV5vz1LCNVFQPZtwZEjKDA8SaHXuEnIQ4Fy2MgKp0IMq0O4II+FL6u6G4asTUt6VjszVtTWU+FXEpRA28apyEoEdma6Bg0QUAo6cqI2dskamjZwulsjlXpHBV+HmAmFLuLeMjald1xGyYSdTl2KR4UoXZQpR0FXuECoXbZbAz97ITsCUkA/GoZ0pRaGij2jBLr2g5nWsi8oSURCYXATIO2x0+FJ/422KEPsqSIloiPJZM+pUaxhl4UOpV31EKKgCqC+oGFXLhOiWxskeQGwnX8ULr2lm1emVS6gxsQSFNlPUQDWbFUJjSjo8ncTJ0rqzZLOyTV9q0KTMURRiSUJPd/4rdbJi2/bqTuKrk0Uu7guq051atcGKhqKKYWgQltS40ojheCOOE92Ep95atEJ8Co6TtpuZpy4P4fQpUqgxTljvB6VpCAopgQIGn9UQdJJOu+vgKXJJxViYnzbXg8lurFLQk5VJOgWkygmAYCuutBnIkxTpivChCiyhQCGoLrilQ2FKAgAx05QTqaTl2sKKZmOY2PiK6MuSsdxSZpNWWmkka7119hUkSRpXMlM09i0aO4erLIBIqilGtMTN/lTESKDOEEyOdLyGSOTdvNGLPA0rbKpqiLY78q6svKSCATRjJMWSYMUMqinxooLJKUhU60PU3Jmrdy+CkAUdAKxc6VVIrshGtZcrjiuayEGiLOHkozj4VeuUpLYgQedBugrbF8CpRRDSI8alE42DgQ3B3NZbss+WNJqssEzzqe3qEAcqmlY10qL14jKoNjXrTJwawNZcCCgwEk7hRSowPHKR60p2Ti1rzxMUdwbEvz20hPeUoJ850H1pZxtM5S2TGsWzvusXCAkpUoIhASUx7moOoUANSD72mhocAmY6U88R2bD1t2jzYNyMrQUCdp8NDAn5UptYOpTm0JjehGKmtBc6WyvdsoI7vxq1hKUpUkjeZnpVTF3UtflpHrUw5wCF9K6ULVHJnsmB3SH28onMkQJ3IHOlT8TllHYp5kLJ9MoHnuaBYbiLiVtPIWpJzrEbpKRl+5VVzixLj7iFLUCEtjw3JP88qnGNukNy1sRnlVSUozFMDzaQqANvhXK2s0rXFXjrQJSvZxw8TpEmiDtqQDrRzDMIS0Cs66Uu4vcqLkj3afstkk7eii20VKIrq3dKaVKZBHMb+lWrFSc2ulGuHuHfa7giPykauK5AdJ6mpN2VqkGcKaVdXrCXDmS53yEJ76khB7NMbAJkeEkk9aL8TPpcy2q222i2sFIQe0dTodFBtBSD3ojNHjQvEuIfZLjt7ZIWttBaRHuRpoQNSgRy1J5xSFjeLXdwouPKcidABkQmT+lIASPrUoYr9wrbsY8fwp1hPagFbJ2WEkQZgpcH6VTpuR40p3LxUNqd2+OFNWCENpTnASClaSpISCoZDMBRISDoD75q1jPD7S1hYQGitttRbGyFKQCofGrpS7NHWkJWHlKBJ1NG2sQSEeIFXLOwabJCgKE4y61PdjeqKNKxG7dF3B8YUhxARrmWn5kV6NxBxeplKlBsKykzrsJ69a8mw9UPNFI3Wn5kU5cRtZ2HVAamB/7A1DM7aQ8dWLHEPFTt33cqUJzZoG50jU8+tLq1Zd96IOMwnQaiqTFqpwkVRQrSDaZdYuc6IJqk/ZTqmrFnYjUE12aQUGJmquLq32J2rKLkoREa1WRZqiSOdMbuHZxPOu1vYj3Tt50l+BrBoWkIiqqrUwTEzVi+SEqIHKrtpeSggikpI7YsDSRWG250re+J7Qx1qy1ZLAzUW6OKTjZSa3LSinNFem4Nwx7bY2QIgIedDp2JQVEmOuoCfXwo5imEoh1ToCErACiQAlllOiG0dVqifCfASnqDcTylm6/Lyp35iqiMyp0iKsBxtN0S2CG83dBMkDxNWscfSFnKImqONxsRSp0C1AHapWbSycXJSJqV1Nj2lpmbW6SJkTXIsyM8VYAShKpGsxVi2UpxAQlM+NdQtlSwvSgFMb01cC4bnWu6V3UMjuxzWRoB5Az6iudnwulUCZUYEeJpuUyhoNWjXuI1Wf3KOpUfX7VPM+K/cCd9ha4zvFJU02nUJGdXmrb5D51R/6uQ1tB61bv3g86sIGZSlEDyGg+Qqo8yGxkWNaeMHBUC0wKFBZ7/OmAhploc5oDfQSMtWbNlTykNGTKgCegnU/D6Ua42GUuQz27AKGEgQFAq/8pI+oobxZdLD6k7JASkeiRPzpldWFXCEpEBMADoNh8hSJi2Jdo+4o7FaiPKTHyrP06UpOxp6RWDhIj41hm4giNwa4rvMsxW9pciZI3rTWxR0XiCPZtd4O9KTl1m1IoteJ7RICKoOWZCO8mKMpP8AglxOuD4Qu6eQ217yjHkOaj4AV6DxO4i0YRY2xygj8xf6lfuUT1NcOAbZNpZrul++7IT1CUmAB/coT5AUuovC++px3QnRI6Cs+SXKVIdJpWaJSlsyTp06VYcvm3O73dOSkBQPmDqPNJB8d6xfW7ZO4+NUGA2NNBWtPjXEjV9yvjti4UpcQlCUIhRCCoyf3ZVSQB0k86dLu4D7Ld4iSSAh4TsQICo/nKl5bioyg6EVd4Zt1sFX6m1aLTyg1LO3GSkUgk40CMduDumhFhZlahmMa024/w6pJKmzKN0+I6eYmlTtiDHMUzkpbOSa0M1tYJQ41G0zr4a00NNBVu5tyPzpRwy7KokGflsaO4TdksXA6Nr+QNZ8sksioMU+LsB3TaELk6CsBttaxk9YrncMdqiZ1rngbBB8ZrU4SbTJ2qou4vZtNpnSY9aAtPpUY50VxmzWVAkaVWTh0CUCTQk34Ggl5LFvO2sVXLgS6AT3Yojg6lIBDiCN4mhOOuoO29MlHimwNvlSO6Et9qRMzVHG7YskAbGqFtnCgaKvXRd0XuKR8W/aMrS2Bl2ZKc1YN4oJAOwok+tQGUDSm7gbhdskXTyZQgyhJ2UpOuY9QnT1I6Ukkg2OmF3zdpaMh2G8rSMwO+YjMrTzJpU4z4rs3kZSFulPeS2klLa1bAuHcgamPGgvHHEai5AO8mPDlPn9qT3H1H8ypxVv6C5UjVN0lT+YtpbBPupnKPKSSKb7/AAZLzWdG8TSRiFylcFIimngvG4SptZ8v8VpSXYlK+4Gw/EVsFSYqUUxq2RmzAjWpS85R0NSlsW0uFSu9zpy4dtR2assE0odkpSgQKM2vbWjiVK907igqvYJL8DBwy06m4dcWe62kkTtmOg+Umt271WV90alKVFMaknZPzNa3WJj2XPISp5RjqQNB9/jXHBcQct2lOIaLusRsBzJOhrJk3MtGPtE5u5uGiFQtMcykj6ij9viofQntPe92evj60fa4pf7JTps4AWExMgz5p5UvYVaBy6eKkdnK84RyTm72XltNacc7Yk40rM4vYhuCNZqxwO2px9Qy65T6SY+k1XvlqNyGx3hskePKnF68ZsLYtMFKn3AC64Ov7U/0jbx1NLmkuNAgtnK1WDcPAbpED0FJN9gpDmSaN8NPOoUorElf6vDn86p4s8pNwVGhgikt/kOROwRe4LlEzVS4VAGmtHbdRdUZOlVb+1SFAVe+PYVK+5nDXljXejtzcJW1BGpiaH2vc1O3I0Rsih4kVWcoyJJSRu7irv8AoxohCQgJHdCUpBMnrr8q5YZbZyVykyfppFYxpRZeQZ07OD0O4oXgmJZSpMwCZHhWHFrJbNE/jo04lvUtOZG+8sbn9I8PE1xRwXfqSFFkjMMwCiAYPMg7Vx4faVdX7aZ1Luck9Ekrjw2j1r0UYhf+0OF91sNoEn3esAJ0kiOvSqZJ12OhGzzt72uyIS8gpB2mCnxhQ09KauD8XS4tSdgUanx/+114uxO4csHW32EZQtstuJEQc/iTqUzqOtKmA2DoZNyn3UuhBI3HOTzjWkvlGzmqZ6faw+04zmgmQD+1WoB8q8tuMLcQ4oL0KVQodCKcsRuXbNxKlADOjNExMakHoqNar3ryLhztBAUtKFKST3tokilxSadPsFpVYKtH1JUkwYBAP0P1q9wff5nFtafmZkEHfvAjWmB3DktsaDWPrSxw012V8QsRKiPvNdm3ugY5XaNPZltqU0owQSCOh5ih71+thQQBKzolO5M6CmL8QwWrltwbOJBV4lHdPyy0uYUk3WJtgie8FAA/sTmTr5gfGtEZe27Fa3Rf/wDxjEXVHtV9mdISonzgACB0qmH7qxWlNwg9mTorcH+1XOOm9OFm/iK7xYfjIJkZU5U/tync9NT1oNxMm8dsnTcoSAy4lSYTEa5DsTIhW/hUY5Jch3BcQjjBzNBbesidOhpPuLRx0iBrRXh66LVsha/cMhI8iRRDDr5CnJjStDcbVk1CXFtHEWjbTacwAV86oXykFQIPpRbHLZC1CDrQZ3Dw2qVHTxoNtdgR33CeC2SnnEtp1KiAPCevlvT7iz6GkpYb0QgZJ8E6qPqZnypf4FdQgOuj3gMiPNUz8h86r43e5m1RoJKAeojvH1n51GbcnxQ1VtiPjyQt4EH3lb9Onyq5xHaIYaQEmcwqrc2RWCpOsULuXVqH5hJy9apTS7ASi33Ki2yBqN6L8PYYpZzAxQ64vysBJAyjYUSwPGg1IjxrpJ1o6wpj+HKby671K0u8RXcpCgNjUoem/AVJeQpbWDbbebTMKoXrrlytKIjkPpVzEGzkzA68xWMKORRWrcJJHqI+9UdSg/pCrUhex5wuvJaT7qYQgeA0p4/6kqzt8raAo5Tooek69eRpIw1xOdb6uROQeP8AgAEnyonjeLpW0x2bmZfZJStJ6jeRyMisrg2l9Gi1Z2tsbxJbZjIQCZQUgKkneD/8iu+L3oSO1ISFqgqjTUAJj4Cg9nxCtKVpKU+6dRoenryoNe3xcVOoGmh8OvWrY007onPaoM3OMJJziQsgienLTxO3ka42t6kq1WPMmgRVWk10sak7OUqVI9BZxdASEgbaVvcWgdUF/wANLuBWanUf9xA8oFGX7ZxgAa+FCKknxQsqqzS/ti2oZdJqxa4IpYzE6cq4vXS3AAEmatP37jbcEQatKKe5MWDfZHfEbABvQ61WwiwSU5pg0EfuHIJzGq9jiTgXoedBdzqdUHONAQhoneCPmT96A8OPNh9HaxkVKSTsDuPpHrW2K3inFuJcVlAKSmeQAIMDnMzQZ5WYwBCRsPufE86KxNTdLyHlcdjPw5dNsXDrYbCnCtQbdn3UiToOp0100mimLqCElK2XV9oQoLTBEjSDJnpppSngK/8A9huNFe711IIzeHKjXEOOrns3GxmTqlSTpPUVnywfqfwUg9Fhd7nw9ds45lUFZ2wZOY6KDaeh1Ao/hlg3bsMtKSpK8wcVIMLUEwqFbEAwPWvPMNu/z2lLClhKpgbk8o9QPhRC+xxxbi1xkCFpAQP0jUKB6mYk+AorFKml+4eS8jFxnfl91lgakd49ZOwpIxV/89ZST3TlBH9ICRHwo9huIJ9o7VRAgFUnc6Tr6fUVnAeF1XaFwtsKjMCQQdTrJH/NJjqG2dTa0XcJ4pcdSEqjMkAHx8atYguXmnhpJg+YoNZ4H7LiDLLig4FLAlGxkR8iflRfjBks9m2kTKjEb5gQI9QRH9pqko817RF7XsNcX2bdyhtC1ZVDMpCpA1gSDPWPjSnwPcttulKgr2gFXYrTsISorzGdoTp/d4VQxzFisBrMFZdVqG2YSAlJ5pSCdeZUo7RVHC7jsnC4T3gleWZglQiJ8QT0qq6WXpqjnPY7l59RWpxau84kghage7yIBGkknn6RRx95RQ4y/o26pKUpJzZpAIBIJiSDzMTSC7c3MpUytRSrZOkjwPWOtOGJKU17OH3E9qZIkhI2A05TqRNZVG6Q8m0VcfwklDbaNEoASB5VAyhpoCBI00+9G5CklStxyO460j4heKK1DYE/GrXGTtEN9gy0AtSTyrfiKzJgjaBNG+CGm1td6J8a34gKUTpoKu1aJ9mL2H2LjcrTKREn4GfkaI3FqlVqcpktyseII1+Qn0q7hb2ZsyNDp6UEXfhpDgJGgWiPjArNKPGVorF8lTAeGX4C8saGg2LpLlyptMDXmQABuSTsB51cwVSVEKB92Mw6f8aUXYZt/aXFvHPKSQiCZSUp1nYFJSdOYUKtKft34AopSKF9g1mhgFLqVrAgqCx7xHTbSlVSIMfSmrGru09nbQ2ypJUorMEEdACeuWZHj60AxANwjswRprO5JJ+WlTi2UaDvCzxyqQEyRrWaqcK3WVawf2/cVK1xk6M8krGDEbcrEg6HpQHFXlIlJJILSUn45wfiAPKacrZITOkg0scR2vekdBU4+yyidiwl8gEfzqfjA+FbkSQfTTf+bVF2xFYPTx+0/atOKFwafZgb2b3OUd1KiTO50G20dZqu80UmCNf5t1HjW1yIP8+XhXGs0ocHxHuyVmKxV/CLZLq+yMBSxDZJASkyCc09UggeJFI3Ry2NWAWrxw4uIGqHipB/pA78+E/MGjVpfpdaS44IBGv3rvwEossKaUYTmX3jy0gHeI0mPGuDSUEKSoJAJUco0Gp5eFQjkpv8DShaLNm6yVZ24IrOPNpWmaXGnEsOFKNjRrD7Fy7WG0HTn4Vq3KNsg9MoYdaNvnsedWX+HbdgEOdoshQSotlKUNk7BSl+8rwTMaTvTG7gjWFkvFQKgCQFHdXKf50oQy3dXFycqFqzRCieybQSJXlGpOv6gJ0FZZzknxRogo92K/FWDZUIc6DKdNddUg+P+aDMMZU7b058V2S0K7FRTnJExmM7mSpRJJjnS3cpCYHSvoegx/pqUlsxZZrlSBDoAWI0IjUaEHrRW7xzNb9mW051HvKI1Mcx0PyoO9ufGPmZ+9QCd/Whkwwyy9y+ysZOK0OP4ZY5aWa1+1NnKtKhnCc5AUBpG420I/caTr24SXnFJzZFKVv7xE6T46A+ddDzqs6jn5/5rPm6RRfKIYz8DhwHgqblq6VE9m0AB+palzt0hKSB/dVHAbbIpbiXFtlvcwZA3II8uVc8DU4wguBxTaVAiUqyqUdD3T0GxNV7/G3FqJCjJABM6mNNTz061CfQTe3Klr/aDHN4oY8MSlm6bvYS40omNZynnI/SedWPxDwsraW8khSWy2sH9QQ9mEH1CT5UmYNbKffbaJPfWlM9Aowo+gk04XeM9oi/AH5a20FA6BOYBPhCcvwpH0vpx5X+PH3X9w8r0zztNWm9RFVKsMqrX0sknQsi9h98puBMgGQDy8juKaMexhi+YQlSShxOyoBA1EwdzIHhScoDn/8AK7sHTx51Z9JilK2v9+xXOVaY64JizbKA2sKUiIChqY8j9q3esG1KzpgoOqTVP8OktLvW23oyLlOsRJHPlsCPMiuzjie2uUW89kkykEz4Ej1ms3VYocnSqlf0xIOXkrMYkphZyHTpR5m/S8g56SWbZ1T0qBiaPLtCpQSDEgTHOsUHeikl5ORx7Iktj40pYjdKKlEnXbffSAfh869B4c4KW+8c2iBv40q/iJgotLxxpPugIUnyUkH6zRWPk39BjIWbd9SDmSYP18DTXw3ctLeGiirsVhWaIk5dEgdJ3O/hSmBpVzCL3sXAvlqD5EUZY3xf7DruMHEbrRWlsIKcokpygct83MHShBsgXiOQjQ+U/erjlutWR5UnPOVI5pHP1NVWsXV7SVuCUkBDiYiUgAD/ALgACD1FZ8KuVDz0jrhViVOKA0gfcVKOcL2QWHpTmyrCZ8s389alaOL/AAZpTphtgaVWv7LNrVy0FXVMSKGZ8WUx7Qh3tlvpQW6aymfEf4p+xGy3pPxpkgbfwVfDl9gZR2DXxKR4CKpxVwSogASTAA69KabbBG20pUrKpYGoV7pnSCOnzrTPp/WdxJPIodxKApq4Kw9The7sFKDrGoJEDyotbWFrOZDQCzqElUqQQNcoJh1vnp3hzHOmHhvC+wCnFK/1ApZKdZG+kdRXldVCcPa0acdPaYCwG4U2s2zjaio6HTMO8ND8wazjNsbS6CVrz5kg+XKgrrjqFJuAogrJUkzM+B+kdIolbOKv3fzI7RKZCkjWAQCCJ13r0cPT/wBP7rTjW/8ABnnP1NeS08tJfRlTmkcht40z2V2LRK1IjOr/ANfE0uKxAMns0JIIMa7+fjRPBcOXfLyhUIB7x6f5NeVkyuU2sfbwXjjUVciq3hLmIuqKnFZE+8o/p590dfCjNzigsW09kFLIjvKMkx+407ewt27QbbTCYPmT1J5mkZDPbLLKkK7Mr1OwA31nrt61SOFRpyevP+CfqcnSA+JocUhN49EupWUidgSAmR4jUeFI+IXckgU7/iFdKS6GTsE5gOgPdTHhoa81dVrXtQ6hrDGTXf8A88EViSmzqszW6Vc+tVO0rdDtLHqItlHEsg13S0kxO0gn51SCqsFwBIk7/Tb/ABV/UilbEaZav77tNCNOUE6eQJNDVojbWsSRqAcs7xp8awV1F5ozv6GUeJZtrhTZCkqKVAyCNCPKr+C3ujzRV/qNKSmTzAJAnxoLmrVRqWeanCh46NgjSaiTUJ2rFKml2OLKF+tdEEcqro1rrk5j+eFbYydWTaLzakxJMVcwHEcrxUNUmUkcyOscwDQa5zFOUAmY5a+X0rTDVwtIKoSSJ0n1jTX1FZuo6hcuEu3k6OO9o9AXirQhOlR51KSHAfTzqkxgdu5cKBfyjkCeuvvbUwDhJJIAWSnz+9eViSp7Hmmj0ThNIFqlcRmE15H+MiZvEnmppHyKh9q9Sbxpq3aQyZmABXmv4tkvXjXZpKgm3SVZQTHeXvG1aMNcqE8o83WmB6muNWXfcH83BqqarmVV+xSIQtcYcbSEiCB7s6keA12rpdWFyUhxTRyq1BAnfaYkjyNDGyJEiRzAME+tegYPxE0ChGchZSmB7OgJBgQElJmNjrNY5S4u4ootoI8MILNulSxlU6S4oZZiYCfLuiY/qqUCPEDj0hSiCnTujeNCVKJ1JPICKxWhNUZZRbexotBtRJkUPtDRFtVY+ons04onG7ZmlLHrKRTqs6UAxZmQaTDlrRSURKwi3gqcV+iAP7jP0APxq5d3m06kid9ANYmiTbKRZqSPf9pk9cvZwPmTQLFUhKhPgNq+i6Wf6SZgyK5m2bOkyBp9tRWLXE3m21NJcUG1Agp3Gu8ft9K5tJJBABEiBP3E1XSoyQdDz8+dVyRjOuSDG12Cz2LE2iGVCQ24VIPNIUDmT5EgH0qxw/iaLZayo94wCoDMkDfKCD8fEeGuOF8HVePhhJ1IKp6BO/1ol+IXBvsAZUlzMHJCgeRifhWLq+PFwur8IaDp9gaO2ulLdQQSDHOP5FPP4XvK7JRJ1zEH6Ur8AW64WE6hR/4o2zcewlTTSg6sqGdCZzJzayE65k6jXTfwMebi4QdIacpTPS7i9QESrlQLGLwOJKmUDKPeGxPiKQMX4ouEqDL7JbK/dMjUbSIq8q1uOy/LcPeG1JknGSp9gW4NCdxbiRdu1qJmEJSPRIpZWaJYolQdVmEKGh9P+IoaByrbNtQjCx472a1BUqVBDnZqjvB6Qb9jMJSCZBEiAhW4oJbDc0a4ac7J1LoJjbTcddK05neATyTHbVYvXWymAVqKQBAynVMDpH0oC4mNK90tksXIbJLZeQnMhRAKhOhj1rxTGmC284g7pWoHzBrJgmuD/gZu2U5rFSalO2E6q5eVYBqBX0rFX5eUKbhVdmXBzJFcRt5fSuiWj9K0QlLwK0j0/wDCZKQt50wYQlIJ37ypP+35Uu8fcMm3fLrCCWFkq7okNk7pMbDmPhyrr+GdxDzjUxmTKfMHUecGfQ16IG1DQE15nWZ/1domp8HR4fbPxOu9EWsXcR7rhHkSK9UewhpXvNoV5pB+1aIwZhOzLY8kgfasTyRbK/1Oux5u7xW7ElwqUPdJ5VQHELyny7KzJnIFqI/t8q9YfwxpYyqQkjpAj4V5fxjYIt3srYCZAMDxn/FaMMVks6OZN1Rw4gukKS2AiHO8p0wAZUowiB0HM660DNbOb1pWiWko/gfvslGLbiB9KY7VUpACBAiBIIOk6Dag9XcGtwt5CVTlmVEcgN/Lp61KVVsKZLC5CJmZPOpXJ9vItSehIqUVJ+AOKPU7dVXEOUKYdqwl2sGSds0RjSCiVVTvmprdh2ilqwlehE+sV0HbOloWb+2Qi3bj3iVrV6kJSPgn50BvrYFQVlk+dMnEqdCEgACQAD4mlK2xFQ/JWQkkwlSthJjveVfQdH1EYpRZhy429ow02pasqEkmJIGsDqoyAkeJIFcMUwh1KkuJAcCt+z78EdYG3iJHjTLYtsOoUB/p5yEoEa5THaOH9bionXQAgAdbK7tpHdSFeQ+5rL1P/KycqitIvj6ZJWzb8Hx2d44twFOVhUZhGpUjr4Va/E9Lt7cNpZT3EDVRUAmT8/gKHnGEJ5D41Te4iUTCUk9YrHk62eR3xD6Ci7bGDhyyTZtwtwKPONB5Cd6uXGNhR0KSf2yEiOhIkn1il+xbLzZ7R1SZ2CIBHmTP0FBsbdTaAdk66pX9ZBHqIrNUpv7BHLji6iceJiFKSVtvJdUQUFTqVoidQAn3a9T4WsFOJQOgBUTyG3rXhWHErfSTzVOmnOdByFe9cM3iQhUpKu6kAATrqfhpV+HujFkMzuSOnFfAFveIBSezeA/1E65tdAtP6gPDXxryvH/w2vbYFQQHkD9TUqPqiM3wmvcLG+QuAMyFDYK0jwB2PkaKJbV3pHMQfDmPnW19qCmfJjjRBIIg8wdCPMcq5lFfUt9g1rdA9uw2sgkEqSCR1hQ1G9LFz+GOGuapQ6if2OE/Jc0GhlI8Ib0SepNdrZ4pQoyZBHkda9O40/DBDDCVWq1KKVKK+0IkhWUJjKAND9aXbnhIMWL7zq5WAns8vuj83IfMnT0NWlkXGvqgWrFH/qThWFJUUq5FJg66aGumOsEOEkkzBJO8xr51pYJSXESR7w3Hj1rvjaype1DBji8Mn+wZt80gRWQKyRRjhDDRc3jDJ91bgzf2jvK3091JqFKxmF8J/D28uLVNy0gFKiQEqOVRA2UJ0KTrrPKuDnAmIJ3tV/8Akg/RVfRLt0hlKRGVCQAlKfDYAdAIrQuLWNElMpmCBmgbkDr4edURPmfOzXB1+E5vY3ikmPd1843jxiK5jh+7Ej2Z/wD/AJL/AMV9JsuaAJGmUkD/AI9I9BWxUezzExCc22/h6wfjTwyyj2A3Z8+2/A9+kB3sVNQQUlSglUjYjWUnzivSbRxfZo7SO0ypzxtMax616ELbQQJCh3vDofTn50g8Ts+zPFP6SMyfI8vQ6fCsXVyctsTIn3JnrjQz2+s+2TWEiEVKrzX8R7ZaX0qUkhK0pKVRoRqND5zXoNhLriUbTueg3J+FMmNPtlBaUlMDuiYgBIBWozsACPWa2dJHu/4KY9Oz5qNa16+eGrO5BloBRIAKO4qVCQNNDp1pdxL8P0pP5bygP60zPqmK1Siy6yIQqbfw/ZGZ1ZEwkJHqZP8AtFYb4FeJ99EdYPltFMllgXsaS2FZpMlURJgcpOlZs+oMGSa46F/HsGbK5SclSmMYap45UpkjWInw+9ZpcM1x2n/AnqMFNLNXmlVKlYZHqIuMKo5h6j8jUqU2P5ISQJvmwR60q4/aoCScoqVK9zo0qZlydxdwy5UkLAUQBB9etdl3zhHvGsVKwTS5svB+0sYC0HHIXqI6n7U1tspTokADoKlSpZfBhzt2RJpN4oP5tSpQwfIXF8jHCyQXxNeuYCwlQVImII8DUqVoh/3IOT5DXhwkAnf+b9aYmkjKnynptUqVqkNA5ZAHFADQqHzAmqrYhIPOFf7lVKlALKmLf6Dnhmj0Vp9K844+cIwhGvvPJB8R3lR8RNSpSy7Cx+SPJBXrvFfDNq3btOIahaktyc6zMtpUdCqNyTUqU/TtpuiuQ8tvEAH0H0pq/CdoHEmpGyXCP/Aj6E1KlJN3M5/E9uYGd94q1KICJ/T5D70QslHTyX8tvrUqU/gkjFke+jxT9ifvV+4bBSEkaQBFSpSvuPH4kwtX5SaV/wAQWwbdKyO8HYB6AhUj5D4VKlRzfFhn8Dz8Ctk1ipXmmQYeFUiXDzlsehJJHyHwoVxU4Sp4ToGTH/ctJV8alSvV6f4L+Si7GmFPKSh5YMKDi4PSGlRUUs5SJ0DjAHllT/mpUq5xq9uk/wBSk+m/1qKdUWn0EkpbWnJOpTJ2zHWNetYqVHP8GDwF/wANkg3Dk6/lH/cms1KlS6f4FsfxP//Z"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1982.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://ichef.bbci.co.uk/news/ws/410/amz/worldservice/live/assets/images/2015/08/18/150818100955_maradona_hand_of_good_640x360_getty_nocredit.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1986.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://www.elcomercio.com/files/article_default/uploads/2020/04/07/5e8cb7e2775e8.jpeg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1990.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://lh3.googleusercontent.com/proxy/EsL9WyzDFWSvzvznxZydE5FRc4L1grU4677yEUMuPq8YIQtfJvC0SgQkYkSQp1c0hXgcLVQTj4hdG_a6sOr_EWrFsZ9NswP4C43uo1eoxcR2P5s3TKDwXNI"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1994.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://images.daznservices.com/di/library/GOAL_INTERNATIONAL/64/a8/zinedine-zidane-france-brazil-world-cup-1998-final_zyem9apgjdcl18z8aevwncnnj.jpg?t=1372323433&quality=60&w=1200&h=800"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/1998.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://kewoulo.info/wp-content/uploads/2017/03/648x415_ronaldo-zidane-ronaldinho-lors-coupe-monde-2006.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/2006.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://s.hs-data.com/picmon/7a/2w5X_782ksF_l.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/Last_Humiliation.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://www.power987.co.za/wp-content/uploads/2017/12/spain-world-cup.jpg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/Last_Spain.jpg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://le10static.com/img/master/0000/0016/167458.jpeg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/Last_MessiNeymar.jpeg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://www.telegraph.co.uk/content/dam/world-cup/2018/07/15/TELEMMGLPICT000169493493_trans%2B%2BLeUJvOJqnV613e1NxllMSYIixnj0N-lTmS4HQcSqwKA.jpeg"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <img src="images/Last_Mbappe.jpeg" style="width: 100%; height: auto; border-radius: 21px 21px 0 0;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-type-3" style="margin-bottom: 1.5vh">
+                <div class="box-dark box03">
+                    <!-- Trigger -->
+                    <a class="btn"  data-clipboard-text="https://www.flaticon.com/free-icon/football_606077?term=soccer&page=1&position=2"
+                       style="cursor:pointer;display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-weight:300;color:#FFFFFF;background-color:#3C74B1;text-align:center;transition: all 0.5s;"
+                       onmouseover="this.style.backgroundColor='#1c466d'"
+                       onmouseleave="this.style.backgroundColor='#3C74B1'">
+                        Copy link
+                    </a>
+                    <div class="inner-box" style="padding-top:12px;width: 80%; height: 300px; border-radius: 21px 21px 0 0;background-color: #141414;margin-left:auto;margin-right:auto;">
+                        <embed style="width:16vw" type="image/svg+xml" src="images/ball.svg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Footer-->
+<footer class="container_animated-images">
+    <div class="row">
+        <div class="col-type-00">
+            <embed style="width:2vw" type="image/svg+xml" src="images/ball.svg" />
+            <ul style="padding-left: 0; list-style: none; margin-top: 0;cursor:pointer;" onclick="change_tab('VISUALIZATION from other')">
+                <li><small class="text-skred">2020 EPFL COM-480 Data Visualization</small>
+            </ul>
+        </div>
+        <div class="col-type-3">
+            <h5 class="text-gradient" style="padding-top: 6px">About</h5>
+            <ul id="about_list" class="text-small" style="padding-left: 0; list-style: none; margin-top: 0">
+                <li><a class="text-skred" onclick="change_tab('TEAM from image sources')" style="cursor: pointer">Team</a></li>
+                <li><a class="text-skred"
+                       target="_blank" rel="noopener noreferrer"
+                       href="https://github.com/com-480-data-visualization/com-480-project-le-kfc">
+                    Code repository
+                </a></li>
+                <li><a class="text-skred" href="#">Image sources</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!--Script code to copy urls-->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+</script>
+
+</body>
+</html>

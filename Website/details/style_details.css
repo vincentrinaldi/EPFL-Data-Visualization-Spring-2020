@@ -1,0 +1,309 @@
+:root {
+	--blue: #007bff;
+	--background: #c5e8ff;
+	--backgrounddark: #a5c9e0;
+	--backgrounddark2: #77a0ba;
+	--black:#000;
+	--darkdarkgrey: #111;
+	--darkgrey: #3c3c3c;
+	--grey: #6c6c6c;
+	--lightgrey: #9c9c9c;
+	--lightlightgrey: #cccccc;
+	--light3grey: #ddd;
+	--light4grey: #eee;
+	--white:#fff;
+	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/*
+This makes the border and padding be counted as part of the element's size.
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model
+It switches from
+	https://mdn.mozillademos.org/files/13647/box-model-standard-small.png
+to
+	https://mdn.mozillademos.org/files/13649/box-model-alt-small.png
+*/
+* {
+	box-sizing: border-box;
+}
+
+/*
+Make the document fill the whole viewport, this overrides any weird defaults that browsers might have.
+*/
+html, body, figure {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* Default font and size */
+body {
+	/* center vertically */
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-content: center;
+
+	/* background behind the plot */
+	background: var(--background);
+
+	/* default text */
+	font-family: Helvetica, sans-serif;
+	font-size: 1.1rem;
+}
+
+/*
+It is easier to read if the text is not too wide, so we limit the width.
+We use the class selector ".", so this style will be applied to elements with class="width-limited"
+
+The various units of measurement available in CSS:
+	https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units
+*/
+
+hr {
+	border: 1px solid rgba(40, 97, 125, 0.8);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInAndOut {
+	0% {display: block;opacity: 0;}
+	20% {display: block;opacity: 1;}
+	80% {display: block;opacity: 1;}
+	100% {display: block;opacity: 0;}
+}
+
+/* background for svg bar plot */
+.board {
+	position: absolute;
+	width: 71vw;
+	height: 71vh;
+	left: 18vw;
+	top: 2vh;
+	background: var(--background);
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+/* div to draw svg bar plot inside */
+#graphic {
+	position: absolute;
+	margin-top: 3vh;
+}
+
+/* div to draw svg bar plot of one team inside */
+#graphicTeam {
+	position: absolute;
+	margin-top: 3vh;
+}
+
+/* empty bar plot class for creation of horizontal bars */
+.bar {
+
+}
+
+/* bar plot class for left labels */
+.axis {
+	font-size: 13px;
+	color: #111;
+	font-weight: lighter;
+	animation: 3000ms ease-out 0s 1 fadeInFromNone;
+}
+
+/* bar plot class */
+.axis path,
+.axis line {
+	fill: none;
+	display: none;
+}
+
+/* bar plot class for right labels */
+.label {
+	font-size: 13px;
+	font-weight: lighter;
+}
+
+/* div of board flag display when selecting a team */
+.flagBoardDisplay {
+	width: 7.5vw;
+	height: 7.5vw;
+	margin-top: 0;
+	margin-left: 1vw;
+}
+
+/* image of for div of board flag display */
+.flagBoardDisplay img {
+	object-fit: cover;
+	border-radius: 50%;
+	width: 5vw;
+	height: 5vw;
+}
+
+/* div for team graph title */
+.titleDiv {
+	position: absolute;
+	width: 60vw;
+	height: 3.5vh;
+	left: 7vw;
+	top: 2.5vh;
+	font-size: 23px;
+	font-weight: lighter;
+	color: #111;
+	text-align: left;
+}
+
+/* div of board flag display when selecting a team */
+.flagBoardDisplay2 {
+	position: absolute;
+	width: 7.5vw;
+	height: 7.5vw;
+	margin-top: -7.5vw;
+	margin-left: 63.5vw;
+}
+
+/* image for div of board flag display */
+.flagBoardDisplay2 img {
+	object-fit: cover;
+	border-radius: 50%;
+	width: 5vw;
+	height: 5vw;
+}
+
+/* div for the name of the first country selected */
+.titleDiv1 {
+	position: absolute;
+	width: 40vw;
+	height: 3.5vh;
+	left: 7vw;
+	top: 2.5vh;
+	font-size: 23px;
+	color: #111;
+	text-align: left;
+	pointer-events: none;
+	touch-action: none;
+	font-weight: lighter;
+}
+
+/* div for the name of the second country selected */
+.titleDiv2 {
+	position: absolute;
+	width: 40vw;
+	height: 3.5vh;
+	right: 8.5vw;
+	top: 2.5vh;
+	font-size: 23px;
+	font-weight: lighter;
+	color: #111;
+	text-align: right;
+	pointer-events: none;
+	touch-action: none;
+}
+
+/* animation for stuff like time slider or search bar when opening the tab */
+@keyframes fadeInFromNone {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}
+
+/* time slider */
+#slider_container{
+	color: var(--darkdarkgrey);
+}
+
+/* some classes for table display */
+table.fixed {
+	table-layout:fixed;
+}
+
+table.fixed td {
+	overflow: hidden;
+}
+
+table {
+	border-spacing: 1vw;
+	border-collapse: collapse;
+	background: var(--background);
+	border-radius: 6px;
+	overflow: hidden;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	color: #111;
+}
+
+table * {
+	position: relative;
+}
+
+table td, table th {
+	padding-left: 8px;
+}
+
+table thead tr {
+	height: 60px;
+	background: var(--backgrounddark2);
+	font-size: 16px;
+}
+
+table tbody tr {
+	height: 48px;
+	border-bottom: 1px solid var(--backgrounddark);
+}
+
+table tbody tr:last-child {
+	border: 0;
+}
+
+table td, table th {
+	text-align: center;
+}
+
+table td.l, table th.l {
+	text-align: right;
+}
+
+table td.c, table th.c {
+	text-align: center;
+}
+
+table td.r, table th.r {
+	text-align: center;
+}
+
+@media screen and (max-width: 35.5em) {
+	table {
+		display: block;
+	}
+	table > *, table tr, table td, table th {
+		display: block;
+	}
+	table thead {
+		display: none;
+	}
+	table tbody tr {
+		height: auto;
+		padding: 8px 0;
+	}
+	table tbody tr td {
+		padding-left: 45%;
+		margin-bottom: 12px;
+	}
+	table tbody tr td:last-child {
+		margin-bottom: 0;
+	}
+	table tbody tr td:before {
+		position: absolute;
+		font-weight: 700;
+		width: 40%;
+		left: 10px;
+		top: 0;
+	}
+}
